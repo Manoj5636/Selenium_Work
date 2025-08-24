@@ -1,0 +1,75 @@
+{
+  "id": "aed404a6-7a50-4917-bb55-43d9d0ef515b",
+  "version": "2.0",
+  "name": "Lab1",
+  "url": "https://tutorialsninja.com",
+  "tests": [{
+    "id": "0b100618-0ccf-43e7-b027-a34b62a6607f",
+    "name": "Page",
+    "commands": [{
+      "id": "2147b0e2-4c40-4098-9628-0a38d04fad19",
+      "comment": "",
+      "command": "open",
+      "target": "/demo/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d17b6ee-e06d-4706-bf41-e913aeb23696",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x830",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfcfa0a2-59e7-4a66-9059-5ffe081829f7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Show AllLaptops & Notebooks",
+      "targets": [
+        ["linkText=Show AllLaptops & Notebooks", "linkText"],
+        ["css=.dropdown:nth-child(2) .see-all", "css:finder"],
+        ["xpath=//a[contains(text(),'Show AllLaptops & Notebooks')]", "xpath:link"],
+        ["xpath=//nav[@id='menu']/div[2]/ul/li[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://tutorialsninja.com/demo/index.php?route=product/category&path=18')])[4]", "xpath:href"],
+        ["xpath=//li[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Show AllLaptops & Notebooks')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "044df9b5-da9c-4936-adb5-8ad58e754747",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-layout:nth-child(2) .hidden-xs",
+      "targets": [
+        ["css=.product-layout:nth-child(2) .hidden-xs", "css:finder"],
+        ["xpath=//div[@id='content']/div[4]/div[2]/div/div[2]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "738587f7-fc97-4e60-8012-f8b0fff27d99",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,508)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3acfe748-e625-43ef-91fd-8eb866c2977f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.alert.alert-success.alert-dismissible",
+      "targets": [],
+      "value": "Success: You have added MacBook to your shopping cart!\\n"
+    }]
+  }],
+  "suites": [{
+    "id": "2b6c66b0-02c3-49ac-8d6b-ef92ba56b476",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0b100618-0ccf-43e7-b027-a34b62a6607f"]
+  }],
+  "urls": ["https://tutorialsninja.com/"],
+  "plugins": []
+}
